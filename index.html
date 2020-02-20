@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>ORGA App Theme Generator</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 20px;
+        }
+
+        .generator-device.ios .generator-device_notch {
+            display: block;
+            left: 50%;
+            position: absolute;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            fill: #090a0d;
+            top: -1px;
+            width: 165px;
+            z-index: 2;
+        }
+
+        .generator-device.ios figure:after {
+            background-color: rgba(255,255,255,.5);
+            border-radius: 2px;
+            bottom: 6px;
+            content: "";
+            height: 4px;
+            width: 35%;
+            z-index: 1;
+            display: block;
+            left: 50%;
+            position: absolute;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+
+        figure {
+            border-radius: 32px;
+            -webkit-box-shadow: 0 0 0 14px #090a0d, 0 0 0 17px #9fa3a8, 0 0 34px 17px rgba(0,0,0,.2);
+            box-shadow: 0 0 0 14px #090a0d, 0 0 0 17px #9fa3a8, 0 0 34px 17px rgba(0,0,0,.2);
+            height: 720px;
+            margin: 17px 0 0 17px !important;
+            max-width: 360px;
+            min-width: 360px;
+            overflow: hidden;
+            padding-bottom: calc(var(--device-aspect-ratio) * 100%);
+            position: relative;
+            width: calc((100vh - var(--header-height) - var(--device-padding) * 2) / var(--device-aspect-ratio));
+            z-index: 1;
+        }
+
+        iframe {
+            border: none;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            /*border-radius: 30px;*/
+        }
+
+        td {
+            padding: 0 10px 10px 0;
+        }
+
+        .sp-palette-row-selection {
+            margin-top: 15px !important;
+        }
+
+        .css-text_code {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+            height: auto;
+            white-space: pre;
+            background-color: #f5f6f9;
+            border-radius: 8px;
+            border: 0;
+            outline: none;
+            font-family: "Roboto Mono", Menlo, Consolas, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+            font-size: 12px;
+            line-height: 18px;
+            margin: 1.5em 0;
+            padding: 2em 2em;
+            -webkit-font-smoothing: initial;
+            color: #333333;
+            resize: both;
+            overflow: auto;
+        }
+
+        .btn-label {
+            position: relative;
+            left: -12px;
+            display: inline-block;
+            padding: 6px 12px;
+            background: rgba(0,0,0,0.15);
+            border-radius: 3px 0 0 3px;
+        }
+        .btn-labeled {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="spectrum/spectrum.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+
+  </head>
+  <body>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12">
+                <h1>ORGA App Theme Generator</h1>
+                <p>&nbsp;</p>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-5">
+
+                <div class="generator-device ios">
+                    <figure>
+                        <svg class="generator-device_notch" viewBox="0 0 219 31"><path d="M0 1V0h219v1a5 5 0 0 0-5 5v3c0 12.15-9.85 22-22 22H27C14.85 31 5 21.15 5 9V6a5 5 0 0 0-5-5z" fill-rule="evenodd"></path></svg>
+                        <iframe src="app.html" id="appFrame"></iframe>
+                    </figure>
+                </div>
+
+            </div> <!-- col-5 -->
+
+            <div class="col-7">
+
+                <table style="margin-top: 20px;">
+                    <tr>
+                        <td>Background: </td>
+                        <td><input id='backgroundPicker' /></td>
+                    </tr>
+                    <tr>
+                        <td>Text: </td>
+                        <td><input id='textPicker' /></td>
+                    </tr>
+                    <tr>
+                        <td>Primary BG: </td>
+                        <td><input id='primaryBgPicker' /></td>
+                    </tr>
+                    <tr>
+                        <td>Primary FG: </td>
+                        <td><input id='primaryFgPicker' /></td>
+                    </tr>
+                    <tr>
+                        <td>Primary Shade1 BG: </td>
+                        <td><input id='primaryShade1BgPicker' /></td>
+                    </tr>
+                    <tr>
+                        <td>Primary Shade1 FG: </td>
+                        <td><input id='primaryShade1FgPicker' /></td>
+                    </tr>
+                    <tr>
+                        <td>Primary Shade2 BG: </td>
+                        <td><input id='primaryShade2BgPicker' /></td>
+                    </tr>
+                    <tr>
+                        <td>Primary Shade2 FG: </td>
+                        <td><input id='primaryShade2FgPicker' /></td>
+                    </tr>
+                    <tr>
+                        <td>Secondary BG: </td>
+                        <td><input id='secondaryBgPicker' /></td>
+                    </tr>
+                    <tr>
+                        <td>Secondary FG: </td>
+                        <td><input id='secondaryFgPicker' /></td>
+                    </tr>
+                    <tr>
+                        <td>Secondary Shade1 BG: </td>
+                        <td><input id='secondaryShade1BgPicker' /></td>
+                    </tr>
+                    <tr>
+                        <td>Secondary Shade1 FG: </td>
+                        <td><input id='secondaryShade1FgPicker' /></td>
+                    </tr>
+                    <tr>
+                        <td>Secondary Shade2 BG: </td>
+                        <td><input id='secondaryShade2BgPicker' /></td>
+                    </tr>
+                    <tr>
+                        <td>Secondary Shade2 FG: </td>
+                        <td><input id='secondaryShade2FgPicker' /></td>
+                    </tr>
+                    <tr>
+                        <td>Contrast 1: </td>
+                        <td><input id='contrast1Picker' /></td>
+                    </tr>
+                    <tr>
+                        <td>Contrast 2: </td>
+                        <td><input id='contrast2Picker' /></td>
+                    </tr>
+                    <tr>
+                        <td>Contrast 3: </td>
+                        <td><input id='contrast3Picker' /></td>
+                    </tr>
+                    <tr>
+                        <td>Contrast 4: </td>
+                        <td><input id='contrast4Picker' /></td>
+                    </tr>
+                </table>
+
+            </div> <!-- col-7 -->
+
+        </div> <!-- row -->
+
+        <div class="row">
+            <div class="col-12"><p>&nbsp;</p></div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-8">
+
+                <h2>Theme CSS Code</h2>
+
+                <button id="btnCopy" class="btn btn-labeled btn-info" onclick="copyToClipboard('#cssText')">
+                    <span class="btn-label"><i class="fa fa-clipboard"></span></i>Kopieren
+                </button>
+
+                <div id="cssText" class="css-text_code" contenteditable="true" spellcheck="false">--theme-background: <span id="backgroundPickerHex">#ffffff</span>;
+--theme-text: <span id="textPickerHex">#2b4b56</span>;
+
+--theme-color-primary: <span id="primaryBgPickerHex">#2e626d</span>;
+--theme-color-primary: <span id="primaryFgPickerHex">#ffffff</span>;
+
+--theme-color-primary-shade1: <span id="primaryShade1BgPickerHex">#2b4b56</span>;
+--theme-color-primary-shade1: <span id="primaryShade1FgPickerHex">#ffffff</span>;
+
+--theme-color-primary-shade2: <span id="primaryShade2BgPickerHex">#1d3540</span>;
+--theme-color-primary-shade2: <span id="primaryShade2FgPickerHex">#ffffff</span>;
+
+--theme-color-secondary: <span id="secondaryBgPickerHex">#1d8495</span>;
+--theme-color-secondary: <span id="secondaryFgPickerHex">#ffffff</span>;
+
+--theme-color-secondary-shade1: <span id="secondaryShade1BgPickerHex">#1d6d7e</span>;
+--theme-color-secondary-shade1: <span id="secondaryShade1FgPickerHex">#ffffff</span>;
+
+--theme-color-secondary-shade2: <span id="secondaryShade2BgPickerHex">#1c5b6c</span>;
+--theme-color-secondary-shade2: <span id="secondaryShade2FgPickerHex">#ffffff</span>;
+
+--theme-contrast1: <span id="contrast1Picker1Hex">#f8f8f9</span>;
+--theme-contrast2: <span id="contrast1Picker2Hex">#f6f6f7</span>;
+--theme-contrast3: <span id="contrast1Picker3Hex">#a6c7c6</span>;
+--theme-contrast4: <span id="contrast1Picker4Hex">#caeae9</span>;</div>
+
+            </div> <!-- col-8 -->
+
+        </div> <!-- row -->
+
+    </div> <!-- container -->
+
+
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="spectrum/spectrum.js"></script>
+    <script type="text/javascript" src="spectrum/i18n/jquery.spectrum-de.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+
+        colorPicker( '#backgroundPicker', '#ffffff', '--theme-background' );
+        colorPicker( '#textPicker', '#2b4b56', '--theme-text' );
+        colorPicker( '#primaryBgPicker', '#2e626d', '--theme-color-primary' );
+        colorPicker( '#primaryFgPicker', '#ffffff', '--theme-color-primary' );
+        colorPicker( '#primaryShade1BgPicker', '#2b4b56', '--theme-color-primary-shade1' );
+        colorPicker( '#primaryShade1FgPicker', '#ffffff', '--theme-color-primary-shade1' );
+        colorPicker( '#primaryShade2BgPicker', '#1d3540', '--theme-color-primary-shade2' );
+        colorPicker( '#primaryShade2FgPicker', '#ffffff', '--theme-color-primary-shade2' );
+        colorPicker( '#secondaryBgPicker', '#1d8495', '--theme-color-secondary' );
+        colorPicker( '#secondaryFgPicker', '#ffffff', '--theme-color-secondary' );
+        colorPicker( '#secondaryShade1BgPicker', '#1d6d7e', '--theme-color-secondary-shade1' );
+        colorPicker( '#secondaryShade1FgPicker', '#ffffff', '--theme-color-secondary-shade1' );
+        colorPicker( '#secondaryShade2BgPicker', '#1c5b6c', '--theme-color-secondary-shade2' );
+        colorPicker( '#secondaryShade2FgPicker', '#ffffff', '--theme-color-secondary-shade2' );
+        colorPicker( '#contrast1Picker', '#f8f8f9', '--theme-contrast1' );
+        colorPicker( '#contrast2Picker', '#f6f6f7', '--theme-contrast2' );
+        colorPicker( '#contrast3Picker', '#a6c7c6', '--theme-contrast3' );
+        colorPicker( '#contrast4Picker', '#caeae9', '--theme-contrast4' );
+
+        var previousСolor;
+        var isChange = false;
+
+        function colorPicker(element, color, cssProperty) {
+            
+            $(element).spectrum({
+                color: color,
+                preferredFormat: "hex",
+                showInput: true,
+                showPalette: true,
+                showSelectionPalette: true,
+                maxSelectionSize: 22,
+                palette: [
+                    ['#ffffff', '#2e626d', '#2b4b56', '#1d3540', '#1d8495', '#1d6d7e', '#1c5b6c', '#f8f8f9', '#f6f6f7', , '#a6c7c6', '#caeae9']
+                ],
+                localStorageKey: "spectrum.user.palette",
+                showInitial: true,
+                move: function(tinycolor) {
+                    var hex = tinycolor.toHexString();
+                    // console.log('move: ' + hex);
+                    var iframe = document.getElementById("appFrame");
+                    var iframeContent = (iframe.contentWindow || iframe.contentDocument);
+                    if (iframeContent.document)iframeContent = iframeContent.document;
+                    iframeContent.body.style.setProperty(cssProperty, hex);
+                    $(element+'Hex').text(hex);
+                },
+                show: function(tinycolor) {
+                    isChange = false;
+                    var hex = tinycolor.toHexString();
+                    previousСolor = hex;
+                    console.log('show previousСolor: ' + previousСolor);
+                },
+                hide: function(tinycolor) {
+                    if (!isChange && previousСolor) {
+                        var hex = previousСolor
+                        console.log('hide hex: ' + hex);
+                        $(element).spectrum('set', hex);
+                        var iframe = document.getElementById("appFrame");
+                        var iframeContent = (iframe.contentWindow || iframe.contentDocument);
+                        if (iframeContent.document)iframeContent = iframeContent.document;
+                        iframeContent.body.style.setProperty(cssProperty, hex);
+                        $(element+'Hex').text(hex);                    
+                    }
+                },
+                change: function(tinycolor) {
+                    isChange = true;
+                    var hex = tinycolor.toHexString();
+                    console.log('change hex: ' + hex);
+                    console.log('change previousСolor: ' + previousСolor);
+                    var iframe = document.getElementById("appFrame");
+                    var iframeContent = (iframe.contentWindow || iframe.contentDocument);
+                    if (iframeContent.document)iframeContent = iframeContent.document;
+                    iframeContent.body.style.setProperty(cssProperty, hex);
+                    $(element+'Hex').text(hex);
+                },
+            });
+        }
+
+        function copyToClipboard(element) {
+            var $temp = $('<textarea>');
+            $('body').append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+        }
+
+    </script>
+
+  </body>
+</html>

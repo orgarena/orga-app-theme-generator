@@ -1,0 +1,218 @@
+.theme-orga-hell {
+
+    /* ORGArena Farben */
+    --orga1-taupe: #2e626d;
+    --orga2-hell: #c3e2e6;
+    --orga3-orange: #e55d0d;
+    --orga4-petrol: #1d8496;
+    --orga5-tint: #879996;
+    --orga6-dunkel: #484747;
+    --orga7-gruen: #92c252;
+    --orga8-hellorange: #f09e00;
+
+
+    /* Theme Farben */
+    --theme-background: white;
+
+    --theme-color-primary: #2e626d;
+    --theme-color-primary-shade1: #2b4b56;
+    --theme-color-primary-shade2: #1d3540;
+    --theme-color-secondary: #1d8495;
+    --theme-color-secondary-shade1: #1d6d7e;
+    --theme-color-secondary-shade2: #1c5b6c;
+
+    --theme-color-hell: white;
+    --theme-color-dunkel: black;
+
+    --theme-text-label: #333333; /* THEME UNTERSCHIED: Im Desktop Theme #1d8495 */
+    --theme-text-value: var(--theme-color-primary-shade2);
+
+    --theme-text-head: var(--theme-color-primary-shade2);
+    --theme-text: var(--theme-color-primary-shade1);
+    --theme-text-sub: var(--theme-color-primary);
+    --theme-text-sub2: var(--theme-color-secondary);
+
+    --theme-contrast1: #f8f8f9;
+    --theme-contrast2: #f6f6f7;
+    --theme-contrast3: #a6c7c6;
+    --theme-contrast4: #caeae9;
+
+
+    /* IONIC 4 Application Colors: https://ionicframework.com/docs/theming/themes#application-colors*/
+
+    --ion-background-color: var(--theme-background);
+    --ion-background-color-rgb: 255,255,255;
+    --ion-text-color: var(--theme-text);
+    --ion-text-color-rgb: 29,109,126;
+
+
+    /* Theme Farben -> Element Zuordnung */
+
+    --icon-color: var(--theme-color-primary-shade1);
+
+    --button-background-color: var(--theme-color-secondary-shade1);
+    --button-hover-background-color: var(--theme-color-secondary-shade1);
+    --button-color: white;
+    --button-hover-color: white;
+
+    --check-button-nicht-ok-background-color: white;
+    --check-button-nicht-ok-hover-background-color: white;
+    --check-button-ok-background-color: white;
+    --check-button-ok-hover-background-color: white;
+
+    --navbutton-background-color: var(--theme-color-secondary);
+    --navbutton-color: var(--theme-color-hell);
+    --navbutton-icon-color-left: white;
+    --navbutton-icon-color-right: white;
+
+    --checkbox-icon-background-color: var(--theme-color-secondary-shade1);
+    --checkbox-icon-color: white;
+    --checkbox-text-color: var(--theme-text-value);
+    --checkbox-checked-text-color: var(--theme-text-value);
+    --toggle-off-farbe: white;
+    --toggle-on-farbe: var(--theme-color-secondary-shade1);
+    --radio-color: var(--theme-color-secondary-shade1);
+    --radio-color-checked: var(--theme-color-secondary);
+    --radio-text-color: var(--theme-text-value);
+    --radio-checked-text-color: var(--theme-color-secondary-shade1);
+
+    --content-background-color: var(--theme-background);
+    --layout-row-background-color: var(--theme-background);
+
+    --modal-header-background-color: var(--theme-color-primary);
+    --modal-header-color: white;
+    --modal-background-color: var(--theme-background);
+
+    --update-modal-color: white;
+    --update-modal-background-color: var(--theme-color-primary);
+    --update-modal-button-color: white;
+    --update-modal-button-background-color: #008784;
+    --update-modal-button-hover-color: white;
+    --update-modal-button-hover-background-color: #0da4a4;
+    --update-modal-progress-outer-color: white;
+    --update-modal-progress-outer-background-color: var(--theme-color-primary);
+    --update-modal-progress-outer-border-color: white;
+    --update-modal-progress-inner-background-color: #008784;
+
+    --slider-background-color: white;
+    --swiper-pagination-bullet: var(--theme-color-secondary-shade1);
+    --swiper-pagination-bullet-active: var(--theme-color-secondary-shade1);
+
+    --segment-background: var(--theme-color-primary-shade2);
+    --segment-button-color: #333333;
+    --segment-button-background: var(--theme-contrast3);
+    --segment-button-color-active: var(--theme-color-hell);
+    --segment-button-background-active: var(--theme-color-secondary-shade1);
+
+    --tabbar-background: var(--theme-contrast2);
+    --tabbar-tab-button-background-color: var(--theme-contrast2);
+    --tabbar-tab-button-color: var(--theme-color-primary-shade1);
+    --tabbar-tab-icon-color: var(--theme-color-primary-shade1);
+    --tabbar-tab-button-background-color-active: var(--theme-color-secondary-shade1);
+    --tabbar-tab-button-color-active: white;
+    --tabbar-tab-icon-color-active: white;
+
+    --header-background-color: var(--theme-color-primary);
+    --header-background-color-transparent: RGBA(60, 79, 89, .9);
+    --header-color: white;
+
+    --divider-background-color: var(--theme-color-primary-shade1);
+    --divider-color: var(--theme-color-hell);
+    --divider-background-color2: var(--theme-color-primary-shade2);
+    --divider-color2: var(--theme-color-hell);
+    --divider-button-background-color: var(--theme-color-secondary);
+    --divider-button-color: var(--theme-color-hell);
+    --divider-button-background-color2: var(--theme-color-secondary);
+    --divider-button-color2: var(--theme-color-hell);
+
+    --toolbar-background-color: var(--theme-color-primary-shade1);
+    --toolbar-color: white;
+    --toolbar-background-color2: var(--theme-color-primary-shade2);
+    --toolbar-color2: white;
+    --toolbar-text-background-color: white;
+    --toolbar-text-color: black;
+
+    --action-sheet-titel-text-color: var(--divider-color);
+    --action-sheet-titel-background-color: var(--divider-background-color);
+    --action-sheet-text-color: var(--theme-text);
+    --action-sheet-icon-color: var(--icon-color);
+
+    --theme-border-color: var(--theme-contrast4);
+
+    --refresher-text-color: var(--theme-color-secondary-shade1);
+    --refresher-icon-color: var(--theme-color-secondary);
+
+    --alert-background-color: white;
+    /*--alert-titel-text-color: var(--theme-text-value);*/
+    /*--alert-titel-background-color: var(--theme-contrast3);*/
+    --alert-titel-text-color: var(--divider-color);
+    --alert-titel-background-color: var(--divider-background-color);
+    --alert-text-color: var(--theme-text);
+    --alert-icon-color: var(--icon-color);
+    --alert-button-color: var(--icon-color);
+
+    --sopi-love-t1: white;
+    --sopi-love-t2: white;
+    --sopi-love-t3: white;
+    --sopi-love-heart: var(--theme-color-secondary);
+    --sopi-love-background-color: var(--theme-color-primary);
+
+    --scrollbar-thumb-color: var(--theme-color-secondary-shade1);
+    --scrollbar-background-color: var(--theme-contrast2);
+    --scrollbar-corner-color: var(--theme-contrast3);
+
+    --loading-background-color: var(--alert-background-color);
+    --loading-content-color: var(--theme-text);
+    --loading-content-background-color: var(--alert-background-color);
+    --loading-spinner-color: var(--theme-text);
+
+    --text-head: var(--theme-text-head);
+    --text: var(--theme-text);
+    --text-sub: var(--theme-text-sub);
+    --text-sub2: var(--theme-text-sub2);
+    --text-label: var(--theme-text-label);
+    --text-value: var(--theme-text-value);
+
+    --datepicker-header-background-color: var(--theme-color-primary);
+    --datepicker-header-color: white;
+    --datepicker-content-background-color: var(--theme-background);
+    --datepicker-content-color: var(--theme-text-value);
+    --datepicker-selected-background-color: var(--button-background-color);
+    --datepicker-selected-color: var(--button-color);
+
+    --infobox-outer-background-color: var(--theme-color-primary);
+    --infobox-background-color: var(--theme-color-secondary);
+    --infobox-color: var(--theme-contrast1);
+
+    --info-icon-text-icon-color: var(--theme-contrast1);
+    --info-icon-text-text-color: var(--theme-color-primary);
+
+    --searchbar-outer-background-color: rgba(0, 0, 0, 0.1);
+    --searchbar-background-color: white;
+    --searchbar-color: black;
+
+    --eingabetext: #f2f2f2;
+    --warnung: #fbb305; /*yellow;*/
+    --sopi-deko: cornflowerblue;
+    --positiv: #488800;
+    --negativ: #f53d3d;
+    --transparenter-background: rgba(28, 34, 40, 0.6);
+}
+
+
+/* Individuelle Anpassungen */
+
+
+/*
+.theme-orga-hell ion-content {
+    background: linear-gradient(300deg, white, #d3d3d3);
+}
+
+.theme-orga-hell .layout-panel-1 {
+    background: linear-gradient(300deg, white, #d3d3d3);
+}
+
+.theme-orga-hell .layout-panel-2 {
+    background: linear-gradient(300deg, white, #d3d3d3);
+}
+*/
