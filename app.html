@@ -5,13 +5,10 @@
 
     <title>ORGA</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@4.11.10/css/ionic.bundle.css"/>
 
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-
-    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.11.10/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@4.11.10/dist/ionic/ionic.js"></script>
 
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="theme.orga.hell.css">
@@ -19,9 +16,80 @@
 <body class="theme-orga-hell">
 
 <ion-app>
-    <ion-content>
-        <ion-tabs>
-            <ion-router-outlet tabs="true">
+    <ion-menu side="start" content-id="main-content">
+        <ion-header>
+            <ion-toolbar>
+                <ion-row>
+                    <ion-item lines="none">
+                        <img alt="ORGA App Logo" class="HeaderLogo" slot="start" style="margin: 0 16px 0 0 !important;" src="assets/images/logo-header.svg">
+                        <ion-label class="ion-no-margin ion-no-padding">
+                            <p _ngcontent-hrh-c0="" class="header-titel">ORGA App</p>
+                            <p _ngcontent-hrh-c0="" class="header-subtitel">ORGArena</p>
+                        </ion-label>
+                    </ion-item>
+                </ion-row>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <ion-list>
+                <ion-menu-toggle>
+                    <ion-item class="ItemButton1">
+                        <ion-label class="Value1 ">Home</ion-label>
+                        <ion-icon name="ios-arrow-forward" slot="end"></ion-icon>
+                    </ion-item>
+                    <ion-item class="ItemButton1">
+                        <ion-label class="Value1 ">Menüpunkt</ion-label>
+                        <ion-icon name="ios-arrow-forward" slot="end"></ion-icon>
+                    </ion-item>
+                    <ion-item class="ItemButton1">
+                        <ion-label class="Value1 ">Weiterer Menüpunkt</ion-label>
+                        <ion-icon name="ios-arrow-forward" slot="end"></ion-icon>
+                    </ion-item>
+                    <ion-item class="ItemButton1">
+                        <ion-label class="Value1 ">Menüpunkt XY</ion-label>
+                        <ion-icon name="ios-arrow-forward" slot="end"></ion-icon>
+                    </ion-item>
+                </ion-menu-toggle>
+            </ion-list>
+        </ion-content>
+        <ion-footer>
+            <ion-menu-toggle>
+                <ion-button class="navbutton ion-text-start" expand="full">
+                    <ion-icon class="IconLeft" name="ios-download" slot="start"></ion-icon>
+                    <ion-label>
+                        <p class="Headline">Nach Updates suchen</p>
+                    </ion-label>
+                </ion-button>
+                <ion-button class="navbutton ion-text-start" expand="full">
+                    <ion-icon class="IconLeft" name="ios-settings" slot="start"></ion-icon>
+                    <ion-label>
+                        <p class="Headline">Einstellungen</p>
+                    </ion-label>
+                </ion-button>
+                <ion-button class="navbutton ion-text-start" expand="full">
+                    <ion-icon class="IconLeft" name="ios-contact" slot="start"></ion-icon>
+                    <ion-label>
+                        <p class="Headline">Mustermann, Max</p>
+                        <p class="Subline">Abmelden</p>
+                    </ion-label>
+                    <ion-icon class="IconRight" name="exit" slot="end"></ion-icon>
+                </ion-button>
+            </ion-menu-toggle>
+            <ion-toolbar class="SoPiLove ion-text-center">
+                <p class="SoPiLove-T1" style="margin: 0 0 4px 0">
+                    Software mit 
+                    <ion-icon class="SoPi-Heart" name="heart"></ion-icon>
+                    aus Ostwestfalen 
+                </p>
+                <p class="SoPiLove-T2" style="margin: 0;">info@orgarena.de</p>
+                <p class="SoPiLove-T2" style="margin: 0;">© ORGArena GmbH</p>
+                <p class="SoPiLove-T3" style="margin: 4px 0 4px 0;">Version xxx</p>
+            </ion-toolbar>
+        </ion-footer>
+    </ion-menu>
+    <ion-content id="main-content">
+        <ion-tabs >
+            <ion-tab tab="home">
                 <ion-header>
                     <ion-toolbar>
                         <ion-buttons slot="start">
@@ -35,8 +103,8 @@
                             <ion-item class="ion-no-padding" lines="none">
                                 <img alt="ORGA App Logo" class="HeaderLogo" slot="start" src="assets/images/logo-header.svg">
                                 <ion-label class="ion-no-margin ion-no-padding">
-                                    <p class="header-titel">Funktionsbereiche</p>
-                                    <p class="header-subtitel">FC ORGArena - VfB Jordania</p>
+                                    <p class="header-titel">Titelbereich</p>
+                                    <p class="header-subtitel">Untertitel im Titelbereich</p>
                                 </ion-label>
                             </ion-item>
                         </ion-row>
@@ -47,73 +115,71 @@
                         <ion-col class="ion-no-padding">
                             <ion-row>
                                 <ion-col class="ion-no-padding">
-                                    <ion-item-divider class="divider2 Thin ion-text-center" sticky>
-                                        <ion-row>
-                                            <ion-col class="ion-no-padding">
-                                                <p class="Text">Veranstaltung</p>
-                                            </ion-col>
-                                        </ion-row>
-                                    </ion-item-divider>
-                                    <ion-item-divider class="divider2 Thin ion-text-center" sticky>
-                                        <ion-row class="ion-justify-content-center">
-                                            <ion-button class="ion-no-padding ion-padding-horizontal" shape="round" size="small">Veranstaltung freigeben</ion-button>
-                                        </ion-row>
+                                    <ion-item-divider class="divider2" sticky>
+                                        <p class="Text">Divider 2</p>
+                                        <ion-buttons slot="end">
+                                            <ion-row>
+                                                <ion-button shape="round" size="small">
+                                                    Button in Divider 2
+                                                </ion-button>
+                                            </ion-row>
+                                        </ion-buttons>
                                     </ion-item-divider>
                                     <ion-item-group>
                                         <ion-item-divider class="divider Thin ion-text-wrap ion-padding-horizontal" sticky>
-                                            <p class="Text ion-align-items-center">IT</p>
+                                            <p class="Text ion-align-items-center">Divider 1</p>
                                             <ion-button class="buttonIcon" slot="end">PDF</ion-button>
                                         </ion-item-divider>
                                         <ion-item class="Item2 ItemButton1" style="padding: 0;">
-                                            <ion-icon class="Icon2" name="checkmark" slot="start" style="opacity: 0.1"></ion-icon>
+                                            <ion-icon class="Icon2 positiv" name="checkmark" slot="start"></ion-icon>
                                             <ion-col class="ion-no-padding">
-                                                <p class="Top ion-text-wrap">Kassensysteme</p>
+                                                <p class="Top ion-text-wrap">Checkliste alles OK</p>
                                             </ion-col>
                                             <ion-buttons slot="end">
                                                 <ion-badge class="Badge" mode="ios"> 4</ion-badge>
                                             </ion-buttons>
                                         </ion-item>
                                         <ion-item class="Item2 ItemButton1" style="padding: 0;">
-                                            <ion-icon class="Icon2" name="checkmark" slot="start" style="opacity: 0.1"></ion-icon>
+                                            <ion-icon class="Icon2 warnung" name="checkmark" slot="start"></ion-icon>
                                             <ion-col class="ion-no-padding">
-                                                <p class="Top ion-text-wrap">Netzwerk &amp; Applications</p>
+                                                <p class="Top ion-text-wrap">Liste mit Warnungen</p>
                                             </ion-col>
                                             <ion-buttons slot="end">
                                                 <ion-badge class="Badge" mode="ios">2</ion-badge>
                                             </ion-buttons>
                                         </ion-item>
                                         <ion-item class="Item2 ItemButton1" style="padding: 0;">
-                                            <ion-icon class="Icon2" name="checkmark" slot="start" style="opacity: 0.1"></ion-icon>
+                                            <ion-icon class="Icon2 negativ" name="flash" slot="start"></ion-icon>
                                             <ion-col class="ion-no-padding">
-                                                <p class="Top ion-text-wrap">Zutrittssysteme</p>
+                                                <p class="Top ion-text-wrap">Liste nicht OK</p>
                                             </ion-col>
                                             <ion-buttons slot="end">
                                                 <ion-badge class="Badge" mode="ios">4</ion-badge>
                                             </ion-buttons>
                                         </ion-item>
                                     </ion-item-group>
+                                    <ion-segment class="segment" mode="ios">
+                                        <ion-segment-button class="segment-button" value="empfangen">
+                                            <ion-label>Reiter</ion-label>
+                                        </ion-segment-button>
+                                        <ion-segment-button class="segment-button segment-button-checked" value="gesendet" selected="true">
+                                            <ion-label>Reiter aktiv</ion-label>
+                                        </ion-segment-button>
+                                    </ion-segment>
                                     <ion-item-group role="group">
-                                        <ion-item-divider class="divider Thin ion-text-wrap ion-padding-horizontal" sticky>
-                                            <p class="Text ion-align-items-center">Stadionbetrieb </p>
-                                            <ion-button class="buttonIcon" slot="end">PDF</ion-button>
+                                        <ion-item-divider class="divider" sticky>
+                                            <p class="Text">Divider 1</p>
+                                            <ion-buttons slot="end">
+                                                <ion-row>
+                                                    <ion-button shape="round" size="small">
+                                                        Button in Divider 1
+                                                    </ion-button>
+                                                </ion-row>
+                                            </ion-buttons>
                                         </ion-item-divider>
-                                        <ion-item class="Item2 ItemButton1" style="padding: 0;">
-                                            <ion-icon class="Icon2" name="checkmark" slot="start" style="opacity: 0.1"></ion-icon>
-                                            <ion-col class="ion-no-padding">
-                                                <p class="Top ion-text-wrap">Helpdesk übernahme</p>
-                                            </ion-col>
-                                            <ion-buttons slot="end">
-                                                <ion-badge class="Badge" mode="ios">2</ion-badge>
-                                            </ion-buttons>
-                                        </ion-item>
-                                        <ion-item class="Item2 ItemButton1" style="padding: 0;">
-                                            <ion-icon class="Icon2" name="checkmark" slot="start" style="opacity: 0.1"></ion-icon>
-                                            <ion-col class="ion-no-padding">
-                                                <p class="Top ion-text-wrap">Technische Anlagen</p>
-                                            </ion-col>
-                                            <ion-buttons slot="end">
-                                                <ion-badge class="Badge" mode="ios">5</ion-badge>
-                                            </ion-buttons>
+                                        <ion-item>
+                                            <ion-label class="Label1 W30">Toggle Feld mit Label</ion-label>
+                                            <ion-toggle mode="ios" slot="end" checked></ion-toggle>
                                         </ion-item>
                                     </ion-item-group>
                                 </ion-col>
@@ -123,31 +189,34 @@
                                     <ion-item-divider class="divider2 Thin ion-text-center" sticky>
                                         <ion-row>
                                             <ion-col class="ion-no-padding">
-                                                <p class="Text">Intern</p>
+                                                <p class="Text">Divider 2</p>
                                             </ion-col>
                                         </ion-row>
                                     </ion-item-divider>
                                     <ion-item-group>
-                                        <ion-item-divider class="divider Thin ion-text-wrap ion-padding-horizontal" sticky>
-                                            <p class="Text ion-align-items-center">Veranstaltungsorganisation </p>
+                                        <ion-item-divider class="divider" sticky>
+                                            <p class="Text">Divider 1 mit Fab Buttons</p>
+                                            <ion-buttons slot="end">
+                                                <ion-row>
+                                                    <ion-fab-button class="fab-40" disabled="true" style="--box-shadow: none;">
+                                                        <ion-icon name="remove"></ion-icon>
+                                                    </ion-fab-button>
+                                                    <ion-fab-button class="fab-40" style="--box-shadow: none;">
+                                                        <ion-icon name="add"></ion-icon>
+                                                    </ion-fab-button>
+                                                </ion-row>
+                                            </ion-buttons>
                                         </ion-item-divider>
-                                        <ion-item class="Item2 ItemButton1 item" style="padding: 0;">
-                                            <ion-icon class="Icon2" name="checkmark" slot="start" style="opacity: 0.1"></ion-icon>
-                                            <ion-col class="ion-no-padding">
-                                                <p class="Top ion-text-wrap">MD minus 1</p>
-                                            </ion-col>
-                                            <ion-buttons slot="end">
-                                                <ion-badge class="Badge" mode="ios">1</ion-badge>
-                                            </ion-buttons>
+                                        <ion-item class="Item2" >
+                                            <ion-radio slot="start" checked="true"></ion-radio>
+                                            <ion-label>
+                                                <p class="Headline">Radio Button mit Head Label (andere Farbe)</p>
+                                                <p class="Text ion-text-wrap">Auch mit Untertitel</p>
+                                            </ion-label>
                                         </ion-item>
-                                        <ion-item class="Item2 ItemButton1" style="padding: 0;">
-                                            <ion-icon class="Icon2" name="checkmark" slot="start" style="opacity: 0.1"></ion-icon>
-                                            <ion-col class="ion-no-padding">
-                                                <p class="Top ion-text-wrap">Spieltagsvorbereitung</p>
-                                            </ion-col>
-                                            <ion-buttons slot="end">
-                                                <ion-badge class="Badge" mode="ios">3</ion-badge>
-                                            </ion-buttons>
+                                        <ion-item>
+                                            <ion-checkbox mode="ios" slot="start" checked="true"></ion-checkbox>
+                                            <ion-label>Checkbox mit Label</ion-label>
                                         </ion-item>
                                     </ion-item-group>
                                 </ion-col>
@@ -155,25 +224,150 @@
                         </ion-col>
                     </ion-row>
                 </ion-content>
-            </ion-router-outlet>
+                <ion-fab vertical="bottom" horizontal="end">
+                    <ion-fab-button>
+                        <ion-icon name="camera"></ion-icon>
+                    </ion-fab-button>
+                    <ion-fab-list side="top">
+                        <ion-fab-button>
+                            <ion-icon name="camera"></ion-icon>
+                        </ion-fab-button>
+                        <ion-fab-button>
+                            <ion-icon name="images"></ion-icon>
+                        </ion-fab-button>
+                    </ion-fab-list>
+                </ion-fab>
+            </ion-tab>
+            <ion-tab tab="aktionen">
+                <ion-header>
+                    <ion-toolbar>
+                        <ion-buttons slot="start">
+                            <ion-menu-toggle auto-hide="false" class="SOPI-Header-Button">
+                                <ion-button>
+                                    <ion-icon name="menu"></ion-icon>
+                                </ion-button>
+                            </ion-menu-toggle>
+                        </ion-buttons>
+                        <ion-row>
+                            <ion-item class="ion-no-padding" lines="none">
+                                <img alt="ORGA App Logo" class="HeaderLogo" slot="start" src="assets/images/logo-header.svg">
+                                <ion-label class="ion-no-margin ion-no-padding">
+                                    <p class="header-titel">Titelbereich</p>
+                                    <p class="header-subtitel">Untertitel im Titelbereich</p>
+                                </ion-label>
+                            </ion-item>
+                        </ion-row>
+                    </ion-toolbar>
+                </ion-header>
+                <ion-content>
+                    <ion-item class="InfoIconText item md in-list ion-focusable hydrated">
+                        <ion-icon slot="start" src="assets/svgicons/info.svg"></ion-icon>
+                        <p>Die App Inhalte finden Sie auf dem Home Tab. Einfach unten links <strong>auf Home klicken</strong>.</p>
+                    </ion-item>
+                </ion-content>
+            </ion-tab>
+            <ion-tab tab="mitteilungen">
+                <ion-header>
+                    <ion-toolbar>
+                        <ion-buttons slot="start">
+                            <ion-menu-toggle auto-hide="false" class="SOPI-Header-Button">
+                                <ion-button>
+                                    <ion-icon name="menu"></ion-icon>
+                                </ion-button>
+                            </ion-menu-toggle>
+                        </ion-buttons>
+                        <ion-row>
+                            <ion-item class="ion-no-padding" lines="none">
+                                <img alt="ORGA App Logo" class="HeaderLogo" slot="start" src="assets/images/logo-header.svg">
+                                <ion-label class="ion-no-margin ion-no-padding">
+                                    <p class="header-titel">Titelbereich</p>
+                                    <p class="header-subtitel">Untertitel im Titelbereich</p>
+                                </ion-label>
+                            </ion-item>
+                        </ion-row>
+                    </ion-toolbar>
+                </ion-header>
+                <ion-content>
+                    <ion-item class="InfoIconText item md in-list ion-focusable hydrated">
+                        <ion-icon slot="start" src="assets/svgicons/info.svg"></ion-icon>
+                        <p>Die App Inhalte finden Sie auf dem Home Tab. Einfach unten links <strong>auf Home klicken</strong>.</p>
+                    </ion-item>
+                </ion-content>
+            </ion-tab>
+            <ion-tab tab="dokumente">
+                <ion-header>
+                    <ion-toolbar>
+                        <ion-buttons slot="start">
+                            <ion-menu-toggle auto-hide="false" class="SOPI-Header-Button">
+                                <ion-button>
+                                    <ion-icon name="menu"></ion-icon>
+                                </ion-button>
+                            </ion-menu-toggle>
+                        </ion-buttons>
+                        <ion-row>
+                            <ion-item class="ion-no-padding" lines="none">
+                                <img alt="ORGA App Logo" class="HeaderLogo" slot="start" src="assets/images/logo-header.svg">
+                                <ion-label class="ion-no-margin ion-no-padding">
+                                    <p class="header-titel">Titelbereich</p>
+                                    <p class="header-subtitel">Untertitel im Titelbereich</p>
+                                </ion-label>
+                            </ion-item>
+                        </ion-row>
+                    </ion-toolbar>
+                </ion-header>
+                <ion-content>
+                    <ion-item class="InfoIconText item md in-list ion-focusable hydrated">
+                        <ion-icon slot="start" src="assets/svgicons/info.svg"></ion-icon>
+                        <p>Die App Inhalte finden Sie auf dem Home Tab. Einfach unten links <strong>auf Home klicken</strong>.</p>
+                    </ion-item>
+                </ion-content>
+            </ion-tab>
+            <ion-tab tab="checklisten">
+                <ion-header>
+                    <ion-toolbar>
+                        <ion-buttons slot="start">
+                            <ion-menu-toggle auto-hide="false" class="SOPI-Header-Button">
+                                <ion-button>
+                                    <ion-icon name="menu"></ion-icon>
+                                </ion-button>
+                            </ion-menu-toggle>
+                        </ion-buttons>
+                        <ion-row>
+                            <ion-item class="ion-no-padding" lines="none">
+                                <img alt="ORGA App Logo" class="HeaderLogo" slot="start" src="assets/images/logo-header.svg">
+                                <ion-label class="ion-no-margin ion-no-padding">
+                                    <p class="header-titel">Titelbereich</p>
+                                    <p class="header-subtitel">Untertitel im Titelbereich</p>
+                                </ion-label>
+                            </ion-item>
+                        </ion-row>
+                    </ion-toolbar>
+                </ion-header>
+                <ion-content>
+                    <ion-item class="InfoIconText item md in-list ion-focusable hydrated">
+                        <ion-icon slot="start" src="assets/svgicons/info.svg"></ion-icon>
+                        <p>Die App Inhalte finden Sie auf dem Home Tab. Einfach unten links <strong>auf Home klicken</strong>.</p>
+                    </ion-item>
+                </ion-content>
+            </ion-tab>
             <ion-tab-bar slot="bottom">
-                <ion-tab-button>
+                <ion-tab-button tab="home" selected>
                     <ion-icon name="home"></ion-icon>
                     <ion-label>Home</ion-label>
                 </ion-tab-button>
-                <ion-tab-button>
-                    <ion-icon name="alert-circle"></ion-icon>
+                <ion-tab-button tab="aktionen">
+                    <ion-icon name="alert"></ion-icon>
                     <ion-label>Aktionen</ion-label>
                 </ion-tab-button>
-                <ion-tab-button>
-                    <ion-icon name="chatbubble"></ion-icon>
+                <ion-tab-button tab="mitteilungen">
+                    <ion-icon name="ios-text"></ion-icon>
                     <ion-label>Mitteilungen</ion-label>
                 </ion-tab-button>
-                <ion-tab-button>
+                <ion-tab-button tab="dokumente">
                     <ion-icon name="document"></ion-icon>
                     <ion-label>Dokumente</ion-label>
                 </ion-tab-button>
-                <ion-tab-button selected="true">
+                <ion-tab-button tab="checklisten">
                     <ion-icon name="checkmark-circle"></ion-icon>
                     <ion-label>Checklisten</ion-label>
                 </ion-tab-button>

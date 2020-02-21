@@ -122,8 +122,12 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-12">
+            <div class="col-10">
                 <h1>ORGA App Theme Generator</h1>
+                <p>Mit den Farb-Auswahlfelder (rechte Seite) können Sie die einzelnen Elemente der ORGA App in einer Live Ansicht verändern. Ganz unten auf dieser Seite wird dabei automatisch der Theme CSS Code generiert, den Sie uns einfach per E-Mail zuschicken können.</p>
+                <p>* Bitte klicken Sie in der Live Ansicht der App auch oben links auf das Menü Icon <i class="fa fa-bars"></i>, um die <strong>Farben im Hauptmenü</strong> zu sehen. Um das Menü wieder zu schließen, klicken Sie einfach auf einen der Menüpunkte.</p>
+                <p>** Auf den anderen Tabs (Aktionen, Mitteilungen...) sehen Sie das <strong>Layout für einen allgemeinen Hinweis</strong>. Die Icon Farbe wird dort mit "Contrast 1" und die Text Farbe mit "Primary BG" bestimmt.</p>
+                <p>*** Das Theme wird auch für den Desktop Client benutzt. Die Scrollbar (Scroll-Leiste) die dort verwendet wird, kann farblich angepasst werden (Secondary Shade2 BG). In der Live Ansicht der App ist das nicht zu sehen. Setzen Sie die Farbe im Zweifelsfall gleich mit der Primary BG Farbe.</p>
                 <p>&nbsp;</p>
             </div>
         </div>
@@ -143,77 +147,73 @@
 
             <div class="col-7">
 
-                <table style="margin-top: 20px;">
+                <table style="margin-top: 35px;">
                     <tr>
-                        <td>Background: </td>
+                        <td>Background (allgeminer Hintergrund): </td>
                         <td><input id='backgroundPicker' /></td>
                     </tr>
                     <tr>
-                        <td>Text: </td>
+                        <td>Text (allgemeiner Text): </td>
                         <td><input id='textPicker' /></td>
                     </tr>
                     <tr>
-                        <td>Primary BG: </td>
+                        <td>Primary BG (Hauptfarbe) **: </td>
                         <td><input id='primaryBgPicker' /></td>
                     </tr>
                     <tr>
-                        <td>Primary FG: </td>
+                        <td>Primary FG (Schrift auf Hauptfarbe): </td>
                         <td><input id='primaryFgPicker' /></td>
                     </tr>
                     <tr>
-                        <td>Primary Shade1 BG: </td>
+                        <td>Primary Shade1 BG (Divider 1, Hauptmenü Icons)* : </td>
                         <td><input id='primaryShade1BgPicker' /></td>
                     </tr>
                     <tr>
-                        <td>Primary Shade1 FG: </td>
+                        <td>Primary Shade1 FG (Divider 1 Schrift): </td>
                         <td><input id='primaryShade1FgPicker' /></td>
                     </tr>
                     <tr>
-                        <td>Primary Shade2 BG: </td>
+                        <td>Primary Shade2 BG (Divider 2 und Hauptmenü Text) *: </td>
                         <td><input id='primaryShade2BgPicker' /></td>
                     </tr>
                     <tr>
-                        <td>Primary Shade2 FG: </td>
+                        <td>Primary Shade2 FG (Divider 2 Schrift): </td>
                         <td><input id='primaryShade2FgPicker' /></td>
                     </tr>
                     <tr>
-                        <td>Secondary BG: </td>
+                        <td>Secondary BG (Buttons) *: </td>
                         <td><input id='secondaryBgPicker' /></td>
                     </tr>
                     <tr>
-                        <td>Secondary FG: </td>
+                        <td>Secondary FG (Buttons Schrift): </td>
                         <td><input id='secondaryFgPicker' /></td>
                     </tr>
                     <tr>
-                        <td>Secondary Shade1 BG: </td>
+                        <td>Secondary Shade1 BG (u.a. aktive Reiter): </td>
                         <td><input id='secondaryShade1BgPicker' /></td>
                     </tr>
                     <tr>
-                        <td>Secondary Shade1 FG: </td>
+                        <td>Secondary Shade1 FG (aktive Reiter Schrift): </td>
                         <td><input id='secondaryShade1FgPicker' /></td>
                     </tr>
                     <tr>
-                        <td>Secondary Shade2 BG: </td>
+                        <td>Secondary Shade2 BG (Scrollbar) ***: </td>
                         <td><input id='secondaryShade2BgPicker' /></td>
                     </tr>
                     <tr>
-                        <td>Secondary Shade2 FG: </td>
-                        <td><input id='secondaryShade2FgPicker' /></td>
-                    </tr>
-                    <tr>
-                        <td>Contrast 1: </td>
+                        <td>Contrast 1 **: </td>
                         <td><input id='contrast1Picker' /></td>
                     </tr>
                     <tr>
-                        <td>Contrast 2: </td>
+                        <td>Contrast 2 (Tab Hintergrund): </td>
                         <td><input id='contrast2Picker' /></td>
                     </tr>
                     <tr>
-                        <td>Contrast 3: </td>
+                        <td>Contrast 3 (Reiter Hintergrund): </td>
                         <td><input id='contrast3Picker' /></td>
                     </tr>
                     <tr>
-                        <td>Contrast 4: </td>
+                        <td>Contrast 4 (Linien): </td>
                         <td><input id='contrast4Picker' /></td>
                     </tr>
                 </table>
@@ -228,39 +228,60 @@
 
         <div class="row">
 
-            <div class="col-8">
+            <div class="col-10">
+
+                <p>&nbsp;</p>
 
                 <h2>Theme CSS Code</h2>
 
-                <button id="btnCopy" class="btn btn-labeled btn-info" onclick="copyToClipboard('#cssText')">
-                    <span class="btn-label"><i class="fa fa-clipboard"></span></i>Kopieren
+                <p>
+                    Bitte schicken Sie den generierten CSS Code per E-Mail an <strong>info@orgarena.de</strong>.<br />
+                    Als Betreff schreiben Sie bitte "Theming - [IHR VEREIN]".<br />
+                    Sie können dafür auch den Button "E-Mail vorbereiten" benutzen. Es öffnet sich Ihr E-Mail Programm und eine neue Mail wird vorbereitet. Es wird noch nichts automatisch verschickt!<br />
+                </p>
+
+                <button id="btnCopy" class="btn btn-labeled btn-info" onclick="openMailClient('#cssText')">
+                    <span class="btn-label"><i class="fa fa-envelope"></span></i>E-Mail vorbereiten
                 </button>
 
-                <div id="cssText" class="css-text_code" contenteditable="true" spellcheck="false">--theme-background: <span id="backgroundPickerHex">#ffffff</span>;
---theme-text: <span id="textPickerHex">#2b4b56</span>;
+                <button id="btnCopy" class="btn btn-labeled btn-info float-right" onclick="copyToClipboard('#cssText')">
+                    <span class="btn-label"><i class="fa fa-clipboard"></span></i>CSS Code kopieren
+                </button>
 
---theme-color-primary: <span id="primaryBgPickerHex">#2e626d</span>;
---theme-color-primary: <span id="primaryFgPickerHex">#ffffff</span>;
+                <div id="cssText" class="css-text_code" contenteditable="false" spellcheck="false">--theme-background: <span class="backgroundPickerHex">#ffffff</span>;
 
---theme-color-primary-shade1: <span id="primaryShade1BgPickerHex">#2b4b56</span>;
---theme-color-primary-shade1: <span id="primaryShade1FgPickerHex">#ffffff</span>;
+--theme-text-head: <span class="textPickerHex">#2b4b56</span>;
+--theme-text: <span class="textPickerHex">#2b4b56</span>;
+--theme-text-label: <span class="textPickerHex">#2b4b56</span>;
+--theme-text-value: <span class="textPickerHex">#2b4b56</span>;
+--theme-text-sub: <span class="textPickerHex">#2b4b56</span>;
+--theme-text-sub2: <span class="textPickerHex">#2b4b56</span>;
 
---theme-color-primary-shade2: <span id="primaryShade2BgPickerHex">#1d3540</span>;
---theme-color-primary-shade2: <span id="primaryShade2FgPickerHex">#ffffff</span>;
+--theme-color-primary: <span class="primaryBgPickerHex">#2e626d</span>;
+--header-color: <span class="primaryFgPickerHex">#ffffff</span>;
 
---theme-color-secondary: <span id="secondaryBgPickerHex">#1d8495</span>;
---theme-color-secondary: <span id="secondaryFgPickerHex">#ffffff</span>;
+--theme-color-primary-shade1: <span class="primaryShade1BgPickerHex">#2b4b56</span>;
+--divider-color: <span class="primaryShade1FgPickerHex">#ffffff</span>;
 
---theme-color-secondary-shade1: <span id="secondaryShade1BgPickerHex">#1d6d7e</span>;
---theme-color-secondary-shade1: <span id="secondaryShade1FgPickerHex">#ffffff</span>;
+--theme-color-primary-shade2: <span class="primaryShade2BgPickerHex">#1d3540</span>;
+--divider-color2: <span class="primaryShade2FgPickerHex">#ffffff</span>;
 
---theme-color-secondary-shade2: <span id="secondaryShade2BgPickerHex">#1c5b6c</span>;
---theme-color-secondary-shade2: <span id="secondaryShade2FgPickerHex">#ffffff</span>;
+--theme-color-secondary: <span class="secondaryBgPickerHex">#1d8495</span>;
+--divider-button-color: <span class="secondaryFgPickerHex">#ffffff</span>;
 
---theme-contrast1: <span id="contrast1Picker1Hex">#f8f8f9</span>;
---theme-contrast2: <span id="contrast1Picker2Hex">#f6f6f7</span>;
---theme-contrast3: <span id="contrast1Picker3Hex">#a6c7c6</span>;
---theme-contrast4: <span id="contrast1Picker4Hex">#caeae9</span>;</div>
+--theme-color-secondary-shade1: <span class="secondaryShade1BgPickerHex">#1d6d7e</span>;
+--segment-button-color-active: <span class="secondaryShade1FgPickerHex">#ffffff</span>;
+--button-color: <span class="secondaryShade1FgPickerHex">#ffffff</span>;
+--checkbox-icon-color: <span class="secondaryShade1FgPickerHex">#ffffff</span>;
+--tabbar-tab-icon-color-active: <span class="secondaryShade1FgPickerHex">#ffffff</span>;
+--tabbar-tab-button-color-active: <span class="secondaryShade1FgPickerHex">#ffffff</span>;
+
+--theme-color-secondary-shade2: <span class="secondaryShade2BgPickerHex">#1c5b6c</span>;
+
+--theme-contrast1: <span class="contrast1PickerHex">#f8f8f9</span>;
+--theme-contrast2: <span class="contrast2PickerHex">#f6f6f7</span>;
+--theme-contrast3: <span class="contrast3PickerHex">#a6c7c6</span>;
+--theme-contrast4: <span class="contrast4PickerHex">#caeae9</span>;</div>
 
             </div> <!-- col-8 -->
 
@@ -275,30 +296,28 @@
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
     <script>
-
-        colorPicker( '#backgroundPicker', '#ffffff', '--theme-background' );
-        colorPicker( '#textPicker', '#2b4b56', '--theme-text' );
-        colorPicker( '#primaryBgPicker', '#2e626d', '--theme-color-primary' );
-        colorPicker( '#primaryFgPicker', '#ffffff', '--theme-color-primary' );
-        colorPicker( '#primaryShade1BgPicker', '#2b4b56', '--theme-color-primary-shade1' );
-        colorPicker( '#primaryShade1FgPicker', '#ffffff', '--theme-color-primary-shade1' );
-        colorPicker( '#primaryShade2BgPicker', '#1d3540', '--theme-color-primary-shade2' );
-        colorPicker( '#primaryShade2FgPicker', '#ffffff', '--theme-color-primary-shade2' );
-        colorPicker( '#secondaryBgPicker', '#1d8495', '--theme-color-secondary' );
-        colorPicker( '#secondaryFgPicker', '#ffffff', '--theme-color-secondary' );
-        colorPicker( '#secondaryShade1BgPicker', '#1d6d7e', '--theme-color-secondary-shade1' );
-        colorPicker( '#secondaryShade1FgPicker', '#ffffff', '--theme-color-secondary-shade1' );
-        colorPicker( '#secondaryShade2BgPicker', '#1c5b6c', '--theme-color-secondary-shade2' );
-        colorPicker( '#secondaryShade2FgPicker', '#ffffff', '--theme-color-secondary-shade2' );
-        colorPicker( '#contrast1Picker', '#f8f8f9', '--theme-contrast1' );
-        colorPicker( '#contrast2Picker', '#f6f6f7', '--theme-contrast2' );
-        colorPicker( '#contrast3Picker', '#a6c7c6', '--theme-contrast3' );
-        colorPicker( '#contrast4Picker', '#caeae9', '--theme-contrast4' );
+        colorPicker( '#backgroundPicker', '#ffffff', ['--theme-background'] );
+        colorPicker( '#textPicker', '#2b4b56', ['--theme-text-head', '--theme-text', '--theme-text-label', '--theme-text-value', '--theme-text-sub', '--theme-text-sub2' ] );
+        colorPicker( '#primaryBgPicker', '#2e626d', ['--theme-color-primary'] );
+        colorPicker( '#primaryFgPicker', '#ffffff', ['--header-color'] );
+        colorPicker( '#primaryShade1BgPicker', '#2b4b56', ['--theme-color-primary-shade1'] );
+        colorPicker( '#primaryShade1FgPicker', '#ffffff', ['--divider-color'] );
+        colorPicker( '#primaryShade2BgPicker', '#1d3540', ['--theme-color-primary-shade2'] );
+        colorPicker( '#primaryShade2FgPicker', '#ffffff', ['--divider-color2'] );
+        colorPicker( '#secondaryBgPicker', '#1d8495', ['--theme-color-secondary'] );
+        colorPicker( '#secondaryFgPicker', '#ffffff', ['--divider-button-color'] );
+        colorPicker( '#secondaryShade1BgPicker', '#1d6d7e', ['--theme-color-secondary-shade1'] );
+        colorPicker( '#secondaryShade1FgPicker', '#ffffff', ['--segment-button-color-active', '--button-color', '--checkbox-icon-color', '--tabbar-tab-icon-color-active', '--tabbar-tab-button-color-active'] );
+        colorPicker( '#secondaryShade2BgPicker', '#1c5b6c', ['--theme-color-secondary-shade2'] );
+        colorPicker( '#contrast1Picker', '#f8f8f9', ['--theme-contrast1'] );
+        colorPicker( '#contrast2Picker', '#f6f6f7', ['--theme-contrast2'] );
+        colorPicker( '#contrast3Picker', '#a6c7c6', ['--theme-contrast3'] );
+        colorPicker( '#contrast4Picker', '#caeae9', ['--theme-contrast4'] );
 
         var previousСolor;
         var isChange = false;
 
-        function colorPicker(element, color, cssProperty) {
+        function colorPicker(element, color, cssProperties) {
             
             $(element).spectrum({
                 color: color,
@@ -314,12 +333,12 @@
                 showInitial: true,
                 move: function(tinycolor) {
                     var hex = tinycolor.toHexString();
-                    // console.log('move: ' + hex);
                     var iframe = document.getElementById("appFrame");
                     var iframeContent = (iframe.contentWindow || iframe.contentDocument);
                     if (iframeContent.document)iframeContent = iframeContent.document;
-                    iframeContent.body.style.setProperty(cssProperty, hex);
-                    $(element+'Hex').text(hex);
+                    cssProperties.forEach(cssProperty => iframeContent.body.style.setProperty(cssProperty, hex));
+                    var elementClass = element.replace('#', '.');
+                    $(elementClass+'Hex').text(hex);
                 },
                 show: function(tinycolor) {
                     isChange = false;
@@ -330,27 +349,34 @@
                 hide: function(tinycolor) {
                     if (!isChange && previousСolor) {
                         var hex = previousСolor
-                        console.log('hide hex: ' + hex);
                         $(element).spectrum('set', hex);
                         var iframe = document.getElementById("appFrame");
                         var iframeContent = (iframe.contentWindow || iframe.contentDocument);
                         if (iframeContent.document)iframeContent = iframeContent.document;
-                        iframeContent.body.style.setProperty(cssProperty, hex);
-                        $(element+'Hex').text(hex);                    
+                        cssProperties.forEach(cssProperty => iframeContent.body.style.setProperty(cssProperty, hex));
+                        var elementClass = element.replace('#', '.');
+                        $(elementClass+'Hex').text(hex);
                     }
                 },
                 change: function(tinycolor) {
                     isChange = true;
                     var hex = tinycolor.toHexString();
-                    console.log('change hex: ' + hex);
-                    console.log('change previousСolor: ' + previousСolor);
                     var iframe = document.getElementById("appFrame");
                     var iframeContent = (iframe.contentWindow || iframe.contentDocument);
                     if (iframeContent.document)iframeContent = iframeContent.document;
-                    iframeContent.body.style.setProperty(cssProperty, hex);
-                    $(element+'Hex').text(hex);
+                    cssProperties.forEach(cssProperty => iframeContent.body.style.setProperty(cssProperty, hex));
+                    var elementClass = element.replace('#', '.');
+                    $(elementClass+'Hex').text(hex);
                 },
             });
+        }
+
+        function openMailClient(element) {
+            var mailTo = 'info@orgarena.de';
+            var mailSubject = 'Theming - [IHR VEREIN]'
+            var mailBody = $(element).text();
+            window.location='mailto:' + mailTo + '?subject=' + mailSubject + '&body=' + encodeURIComponent(mailBody);
+            return false;
         }
 
         function copyToClipboard(element) {
@@ -359,8 +385,9 @@
             $temp.val($(element).text()).select();
             document.execCommand("copy");
             $temp.remove();
+            return false;
         }
-
+        
     </script>
 
   </body>

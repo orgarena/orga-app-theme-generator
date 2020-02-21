@@ -72,7 +72,7 @@
     --toggle-off-farbe: white;
     --toggle-on-farbe: var(--theme-color-secondary-shade1);
     --radio-color: var(--theme-color-secondary-shade1);
-    --radio-color-checked: var(--theme-color-secondary);
+    --radio-color-checked: var(--theme-color-secondary-shade1);
     --radio-text-color: var(--theme-text-value);
     --radio-checked-text-color: var(--theme-color-secondary-shade1);
 
