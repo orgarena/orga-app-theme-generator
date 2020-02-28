@@ -48,9 +48,7 @@
             max-width: 360px;
             min-width: 360px;
             overflow: hidden;
-            padding-bottom: calc(var(--device-aspect-ratio) * 100%);
             position: relative;
-            width: calc((100vh - var(--header-height) - var(--device-padding) * 2) / var(--device-aspect-ratio));
             z-index: 1;
         }
 
@@ -147,7 +145,7 @@
 
             <div class="col-7">
 
-                <table style="margin-top: 35px;">
+                <table style="margin-top: 22px;">
                     <tr>
                         <td>Background (allgeminer Hintergrund): </td>
                         <td><input id='backgroundPicker' /></td>
@@ -213,6 +211,10 @@
                         <td><input id='contrast3Picker' /></td>
                     </tr>
                     <tr>
+                        <td>Reiter Schrift: </td>
+                        <td><input id='reiterSchriftPicker' /></td>
+                    </tr>
+                    <tr>
                         <td>Contrast 4 (Linien): </td>
                         <td><input id='contrast4Picker' /></td>
                     </tr>
@@ -240,7 +242,7 @@
                     Sie können dafür auch den Button "E-Mail vorbereiten" benutzen. Es öffnet sich Ihr E-Mail Programm und eine neue Mail wird vorbereitet. Es wird noch nichts automatisch verschickt!<br />
                 </p>
 
-                <button id="btnCopy" class="btn btn-labeled btn-info" onclick="openMailClient('#cssText')">
+                <button id="btnMail" class="btn btn-labeled btn-info" onclick="openMailClient('#cssText')">
                     <span class="btn-label"><i class="fa fa-envelope"></span></i>E-Mail vorbereiten
                 </button>
 
@@ -281,6 +283,7 @@
 --theme-contrast1: <span class="contrast1PickerHex">#f8f8f9</span>;
 --theme-contrast2: <span class="contrast2PickerHex">#f6f6f7</span>;
 --theme-contrast3: <span class="contrast3PickerHex">#a6c7c6</span>;
+--segment-button-color: <span class="reiterSchriftPickerHex">#333333</span>;
 --theme-contrast4: <span class="contrast4PickerHex">#caeae9</span>;</div>
 
             </div> <!-- col-8 -->
@@ -312,6 +315,7 @@
         colorPicker( '#contrast1Picker', '#f8f8f9', ['--theme-contrast1'] );
         colorPicker( '#contrast2Picker', '#f6f6f7', ['--theme-contrast2'] );
         colorPicker( '#contrast3Picker', '#a6c7c6', ['--theme-contrast3'] );
+        colorPicker( '#reiterSchriftPicker', '#333333', ['--segment-button-color'] );
         colorPicker( '#contrast4Picker', '#caeae9', ['--theme-contrast4'] );
 
         var previousСolor;
@@ -327,7 +331,7 @@
                 showSelectionPalette: true,
                 maxSelectionSize: 22,
                 palette: [
-                    ['#ffffff', '#2e626d', '#2b4b56', '#1d3540', '#1d8495', '#1d6d7e', '#1c5b6c', '#f8f8f9', '#f6f6f7', , '#a6c7c6', '#caeae9']
+                    ['#ffffff', '#2e626d', '#2b4b56', '#1d3540', '#1d8495', '#1d6d7e', '#1c5b6c', '#f8f8f9', '#f6f6f7', '#a6c7c6', '#333333', '#caeae9']
                 ],
                 localStorageKey: "spectrum.user.palette",
                 showInitial: true,
